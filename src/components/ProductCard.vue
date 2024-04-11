@@ -7,8 +7,9 @@ export default {
       }
     },
     methods: {
-        imgPath() {
-            return `/public/${this.product.frontImage}`;
+        getImgPath(imgFile) {
+            let imgPath = '/public/img/' + imgFile
+            return imgPath;
         }
     }
 }
@@ -17,13 +18,14 @@ export default {
 <template>
     <div class="col-card flex">
         <div class="img">
-            <img class="first" :src="imgPath" alt="">
-            <img class="hover" src="/public/img/1b.webp" alt="">
+            <img class="first" :src="getImgPath(product.frontImage)" alt="">
+            <img class="hover" :src="getImgPath(product.backImage)" alt="">
             <ul class="labels">
+                <li class="label discount">-50%</li>
                 <li class="label discount">-50%</li>
                 <li class="label sustainability">Sostenibilità</li>
             </ul>
-            <button class="heart">
+            <button :class="product.isInFavorites ? 'fav':''" class="heart">
                 &#10084;
         </button>
         </div>

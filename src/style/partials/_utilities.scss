@@ -33,6 +33,10 @@ button.heart {
     right: 0;
 }
 
+button.heart.fav {
+    color: red;
+}
+
 ul.labels {
     position: absolute;
     bottom: 8%;
