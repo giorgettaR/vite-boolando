@@ -19,18 +19,11 @@ export default {
 </script>
 
 <template>
-  <div class="page">
     <HeaderSection/>
     <MainSection/>
     <FooterSection/>
-  </div>
 </template>
 
 <style lang="scss">
 @use './style/general.scss';
-
-.page {
-  display: flex;
-  flex-direction: column;
-}
 </style>

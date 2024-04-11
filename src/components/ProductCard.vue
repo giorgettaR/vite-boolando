@@ -10,7 +10,15 @@ export default {
         getImgPath(imgFile) {
             let imgPath = '/public/img/' + imgFile
             return imgPath;
-        }
+        },
+        // getDiscountPrice(product) {
+        //     let price = product.price
+        //     let isThereDiscount = (badge) => badge.type === "discount";
+        //     if (product.badges.some(isThereDiscount)) {
+        //         let discount = product.badges
+        //         return price
+        //     }
+        // }
     }
 }
 </script>
@@ -21,9 +29,13 @@ export default {
             <img class="first" :src="getImgPath(product.frontImage)" alt="">
             <img class="hover" :src="getImgPath(product.backImage)" alt="">
             <ul class="labels">
-                <li class="label discount">-50%</li>
-                <li class="label discount">-50%</li>
-                <li class="label sustainability">Sostenibilità</li>
+                <li 
+                    v-for="(i) in product.badges"
+                    class="label"
+                    :class="product.badges[i].type"
+                    > 
+                    {{ product.badges[i].value }}
+                </li>
             </ul>
             <button :class="product.isInFavorites ? 'fav':''" class="heart">
                 &#10084;
@@ -34,7 +46,7 @@ export default {
             <h1 class="product">{{ product.name }}</h1>
             <span class="price">
                 {{ product.price }} €
-                <span class="old">29,99 €</span>
+                <!-- <span class="old">{{ getDiscountPrice() }}</span> -->
             </span>
         </div>
     </div>
