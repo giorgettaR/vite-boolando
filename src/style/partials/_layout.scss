@@ -1,0 +1,146 @@
+/* STYLE HEADER */
+
+header {
+    background-color: rgba(255,105,0,255);
+}
+    
+header section {
+    height: fit-content;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+}
+
+header .container .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-logo img {
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-logo {
+    height: 30px;
+}
+
+.col-categories *,
+.col-nav * {
+    padding: 5px;
+}
+
+.col-categories,
+.col-nav {
+    align-items: center;
+    width: 30%;
+}
+
+.col-categories {
+    justify-content: left;
+}
+
+.col-nav {
+    justify-content: end;
+}
+
+
+/* STYLE MAIN */
+
+main .products.container {
+    height: fit-content;
+
+}    
+
+main .products.container >.row{
+    flex-wrap: wrap;
+}
+
+main .products .col-card >*{
+    width: fit-content;
+    height: 100%;
+    flex-direction: column;
+}
+
+main .products .col-card {
+    width: calc(100%/3);
+    flex-direction: column;
+    justify-content: start;
+    padding: 5px;
+}
+
+main .products .col-card >.row {
+    align-items: start;
+}
+
+main .products .col-card img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+main .products .col-card .img {
+    position: relative;
+}
+
+main .products img.first {
+    position: absolute;
+}
+
+main .products .price {
+    color: red;
+    font-weight: bold;
+}
+
+main .products .price .old {
+    color: black;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+/* STYLE FOOTER */
+
+footer {
+    background-color: rgba(26,26,26,255);
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
+    flex-grow: 1;
+
+}
+
+footer section {
+    height: fit-content;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+}
+
+footer .container .row {
+    justify-content: space-between;
+}
+
+.col-info {
+    text-align: start;
+    width: 50%;
+    line-height: 25px;
+}
+
+.col-info span:not(:last-child) {
+    padding-right: 3px;
+    font-size: 15px;
+}
+
+.col-social {
+    text-align: end;
+    width: 15%;
+}
+
+.fa {
+    padding: 3px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}

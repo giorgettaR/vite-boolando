@@ -1,0 +1,50 @@
+@use './variables' as *;
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* GENERAL SETTINGS */
+
+.flex {
+    display: flex;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+section >.container {
+    width: 80vw;
+    height: fit-content;
+    padding: 2vh;
+}
+
+.container >.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.container.horizontal >.row {
+    height: fit-content;
+}
+
+/* DEBUG */
+
+.debug .container {
+border: dashed black 1px;
+}
+
+.debug .container [class^=col] {
+border: dashed black 1px;
+}
