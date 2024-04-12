@@ -30,11 +30,12 @@ export default {
             <img class="hover" :src="getImgPath(product.backImage)" alt="">
             <ul class="labels">
                 <li 
-                    v-for="(i) in product.badges"
+                    v-for="(badge) in product.badges"
                     class="label"
-                    :class="product.badges[i].type"
+                    :class="badge.type"
                     > 
-                    {{ product.badges[i].value }}
+                    {{ badge.value }}
+                    
                 </li>
             </ul>
             <button :class="product.isInFavorites ? 'fav':''" class="heart">

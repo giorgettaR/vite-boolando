@@ -14,7 +14,7 @@ export default  {
                     <span>Bambini</span>
                 </div>
                 <div class="col-logo">
-                    <img src="./img/boolean-logo.png" alt="">
+                    <img src="/public/img/boolean-logo.png" alt="">
                 </div>
                 <div class="col-nav flex" >
                     <span><i class="material-icons">person</i></span>
