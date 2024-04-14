@@ -14,7 +14,6 @@ export default {
   methods: {
     fetchProducts() {
       axios.get('http://localhost:3000/products').then((res) => {
-        console.log(res.data);
         store.products = res.data;
       })
     }
