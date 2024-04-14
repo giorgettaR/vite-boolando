@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+
+@mixin labelOnProduct {
+    display: inline-block;
+    text-align: center;
+    padding: 5px 8px;
+    color: white;
+}

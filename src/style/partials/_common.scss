@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: $font-size;
 }
 
 ul {
@@ -21,18 +22,17 @@ ul {
 .container {
     max-width: 80vw;
     margin: 0 auto;
+    >.row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 section >.container {
     width: 80vw;
     height: fit-content;
     padding: 2vh;
-}
-
-.container >.row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
 }
 
 .container.horizontal >.row {

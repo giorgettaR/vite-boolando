@@ -53,7 +53,7 @@ export default {
             <h1 class="product">{{ product.name }}</h1>
             <span class="price">
                 {{ product.price }} €
-                <span class="old">{{ NoDiscountPrice(product) }}</span>
+                <span class="oldPrice">{{ NoDiscountPrice(product) }}</span>
             </span>
         </div>
     </div>
