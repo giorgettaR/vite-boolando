@@ -65,10 +65,10 @@ ul.labels {
 
 li.label {
     @include labelOnProduct;
-    .tag {
+    &.tag {
         background-color: green;
     }
-    .discount {
+    &.discount {
         background-color: red;
     }
 }

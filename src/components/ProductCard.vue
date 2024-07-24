@@ -11,18 +11,18 @@ export default {
             let imgPath = '/public/img/' + imgFile
             return imgPath;
         },
-        NoDiscountPrice(product) {
-            let isTHereDiscount = false;
-            let NoDiscountPrice = 0;
+        originalPrice(product) {
+            let isThereDiscount = false;
+            let originalPrice = 0;
             for (let i = 0; i < product.badges.length; i++) {
                 if (product.badges[i].type == 'discount') {
                     let discount = product.badges[i].value.slice(1,3)
-                    NoDiscountPrice = product.price/discount*100;
-                    isTHereDiscount = true;
+                    originalPrice = product.price/(100-discount)*100;
+                    isThereDiscount = true;
                 }
             }
-            if (isTHereDiscount)  {
-                return NoDiscountPrice.toFixed(2)
+            if (isThereDiscount)  {
+                return originalPrice.toFixed(2) + ' €'
             }
         }
     }
@@ -53,7 +53,7 @@ export default {
             <h1 class="product">{{ product.name }}</h1>
             <span class="price">
                 {{ product.price }} €
-                <span class="oldPrice">{{ NoDiscountPrice(product) }}</span>
+                <span class="oldPrice">{{ originalPrice(product) }}</span>
             </span>
         </div>
     </div>
