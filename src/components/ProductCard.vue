@@ -8,22 +8,24 @@ export default {
     },
     methods: {
         getImgPath(imgFile) {
-            let imgPath = '/public/img/' + imgFile
+            let imgPath = '/img/' + imgFile
             return imgPath;
         },
+        isThereDiscount(product) {
+            for (let i = 0; i < product.badges.length; i++) {
+                if (product.badges[i].type == 'discount') {
+                    return true
+                }
+            }
+        },
         originalPrice(product) {
-            let isThereDiscount = false;
             let originalPrice = 0;
             for (let i = 0; i < product.badges.length; i++) {
                 if (product.badges[i].type == 'discount') {
                     let discount = product.badges[i].value.slice(1,3)
                     originalPrice = product.price/(100-discount)*100;
-                    isThereDiscount = true;
-                }
-            }
-            if (isThereDiscount)  {
-                return originalPrice.toFixed(2) + ' €'
-            }
+                } 
+            } return originalPrice.toFixed(2) + ' €'
         }
     }
 }
@@ -52,8 +54,9 @@ export default {
             <span class="brand">{{ product.brand }}</span>
             <h1 class="product">{{ product.name }}</h1>
             <span class="price">
-                {{ product.price }} €
-                <span class="oldPrice">{{ originalPrice(product) }}</span>
+                <span v-if="isThereDiscount(product)" class="discountPrice" >{{ product.price }} €  </span>
+                <span v-else>{{ product.price }} €  </span>
+                <span v-if="isThereDiscount(product)" class="oldPrice">{{ originalPrice(product) }}</span>
             </span>
         </div>
     </div>

@@ -4,6 +4,7 @@
 
 header {
     background-color: $color-theme;
+
     section {
         height: fit-content;
         padding-top: 3vh;
@@ -19,6 +20,7 @@ header .container .row {
 
 .col-logo {
     height: 30px;
+
     img {
         height: 100%;
         display: block;
@@ -30,6 +32,7 @@ header .container .row {
 .col-nav {
     align-items: center;
     width: 30%;
+
     * {
         padding: 5px;
     }
@@ -48,9 +51,9 @@ header .container .row {
 main .products.container {
     height: fit-content;
 
-}    
+}
 
-main .products.container >.row{
+main .products.container>.row {
     flex-wrap: wrap;
 }
 
@@ -58,14 +61,20 @@ main .products .col-card {
     width: $size-cards;
     flex-direction: column;
     padding: 5px;
+
     .img {
         position: relative;
+
         img {
             width: 100%;
             display: block;
             margin: auto;
-        };
-    };
+        }
+
+        ;
+    }
+
+    ;
 }
 
 main .products img.first {
@@ -73,8 +82,12 @@ main .products img.first {
 }
 
 main .products .price {
-    color: $color-price;
     font-weight: bold;
+
+    .discountPrice {
+        color: $color-discountPrice;
+    }
+
     .oldPrice {
         color: $color-oldPrice;
         font-weight: normal;
@@ -86,11 +99,13 @@ main .products .price {
 
 footer {
     background-color: $bgcolor-footer;
+
     section {
         height: fit-content;
         padding-top: 3vh;
         padding-bottom: 3vh;
         color: $color-footer;
+
         .row {
             justify-content: space-between;
 
@@ -102,6 +117,7 @@ footer {
     text-align: start;
     width: 50%;
     line-height: 25px;
+
     span:not(:last-child) {
         padding-right: 3px;
         font-size: 15px;
