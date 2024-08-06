@@ -12,6 +12,10 @@ ul {
     list-style: none;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
 
 /* GENERAL SETTINGS */
 
@@ -22,6 +26,7 @@ ul {
 .container {
     max-width: 80vw;
     margin: 0 auto;
+
     >.row {
         width: 100%;
         display: flex;
@@ -29,22 +34,22 @@ ul {
     }
 }
 
-section >.container {
+section>.container {
     width: 80vw;
     height: fit-content;
     padding: 2vh;
 }
 
-.container.horizontal >.row {
+.container.horizontal>.row {
     height: fit-content;
 }
 
 /* DEBUG */
 
 .debug .container {
-border: dashed black 1px;
+    border: dashed black 1px;
 }
 
 .debug .container [class^=col] {
-border: dashed black 1px;
+    border: dashed black 1px;
 }

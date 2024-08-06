@@ -61,6 +61,7 @@ main .products .col-card {
     width: $size-cards;
     flex-direction: column;
     padding: 5px;
+    position: relative;
 
     .img {
         position: relative;
@@ -70,11 +71,7 @@ main .products .col-card {
             display: block;
             margin: auto;
         }
-
-        ;
     }
-
-    ;
 }
 
 main .products img.first {
@@ -121,10 +118,15 @@ footer {
     span:not(:last-child) {
         padding-right: 3px;
         font-size: 15px;
+        margin-right: 5px;
     }
 }
 
 .col-social {
     text-align: end;
     width: 15%;
+
+    a:not(:last-child) {
+        margin-right: 5px;
+    }
 }

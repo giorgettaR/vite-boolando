@@ -1,5 +1,10 @@
 <script>
 export default {
+    data() {
+        return  {
+        like: false
+        }
+    },
     props: {
       product: {
         type: Object,
@@ -7,6 +12,9 @@ export default {
       }
     },
     methods: {
+        likeToggle(){
+            this.like = !this.like
+        },
         getImgPath(imgFile) {
             let imgPath = '/img/' + imgFile
             return imgPath;
@@ -33,7 +41,7 @@ export default {
 
 <template>
     <div class="col-card flex">
-        <div class="img">
+        <div @dblclick="likeToggle()" class="img">
             <img class="first" :src="getImgPath(product.frontImage)" alt="">
             <img class="hover" :src="getImgPath(product.backImage)" alt="">
             <ul class="labels">
@@ -46,10 +54,10 @@ export default {
                     
                 </li>
             </ul>
-            <button :class="product.isInFavorites ? 'fav':''" class="heart">
-                &#10084;
-        </button>
         </div>
+        <button @click="likeToggle()" :class="{ like: this.like }" class="heart">
+                <font-awesome-icon :icon="['fas', 'heart']" />
+        </button>
         <div class="description">
             <span class="brand">{{ product.brand }}</span>
             <h1 class="product">{{ product.name }}</h1>

@@ -2,20 +2,17 @@
 
 /* HOVER IMMAGINE PRODOTTO */
 
-main .products .col-card.flex:hover img.first{
-    opacity: 0;
-    transition: 0.5s;
-}
+main .products .col-card.flex {
 
+    img.first:hover {
+        opacity: 0;
+        transition: 0.8s;
+    }
 
-/* STYLE ICONS */
-
-.fa {
-    padding: 3px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
+    img.first:not(:hover) {
+        opacity: 1;
+        transition: 0.5s;
+    }
 }
 
 /* STYLE BUTTONS */
@@ -28,31 +25,30 @@ button {
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out, 
-    transform 150ms ease;
-}
-
-button:focus {
-    outline-offset: -4px;
+    transition: background 250ms ease-in-out, transform 150ms ease;
 }
 
 button:active {
     transform: scale(2);
 }
 
-
 button.heart {
     background-color: white;
     position: absolute;
-    top: 2%;
-    right: 0;
+    top: 5px;
+    right: 5px;
+
+    &.like {
+        color: red;
+    }
 }
 
 .heart {
     padding: 15px 15px;
     color: black;
+
     .fav {
-    color: red;
+        color: red;
     }
 }
 
@@ -65,9 +61,11 @@ ul.labels {
 
 li.label {
     @include labelOnProduct;
+
     &.tag {
         background-color: green;
     }
+
     &.discount {
         background-color: red;
     }
