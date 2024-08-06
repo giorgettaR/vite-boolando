@@ -16,11 +16,11 @@ export default  {
                 </div>
                 <div class="col-social" >
                     <span>Trovaci anche su</span><br>
-                    <span><a href="#" class="fa fa-twitter"></a></span>
-                    <span><a href="#" class="fa fa-facebook"></a></span>
-                    <span><a href="#" class="fa fa-instagram"></a></span>
-                    <span><a href="#" class="fa fa-pinterest"></a></span>
-                    <span><a href="#" class="fa fa-youtube"></a></span>
+                    <span><a href="#"><font-awesome-icon :icon="['fab', 'x-twitter']" /></a></span>
+                    <span><a href="#"><font-awesome-icon :icon="['fab', 'facebook']" /></a></span>
+                    <span><a href="#"><font-awesome-icon :icon="['fab', 'instagram']" /></a></span>
+                    <span><a href="#"><font-awesome-icon :icon="['fab', 'pinterest']" /></a></span>
+                    <span><a href="#"><font-awesome-icon :icon="['fab', 'youtube']" /></a></span>
                 </div>
             </div>
         </section>

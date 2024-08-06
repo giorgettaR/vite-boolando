@@ -9,17 +9,17 @@ export default  {
         <section class="container horizontal">
             <div class="row">
                 <div class="col-categories flex" >
-                    <span>Donna</span>
-                    <span>Uomo</span>
-                    <span>Bambini</span>
+                    <span><a href="">Donna</a></span>
+                    <span><a href="">Uomo</a></span>
+                    <span><a href="">Bambini</a></span>
                 </div>
                 <div class="col-logo">
                     <img src="/img/boolean-logo.png" alt="">
                 </div>
                 <div class="col-nav flex" >
-                    <span><i class="material-icons">person</i></span>
-                    <span><i class="material-icons">favorite</i></span>
-                    <span><i class="material-icons">shopping_bag</i></span>
+                    <span><a href=""><font-awesome-icon :icon="['fas', 'user']" /></a></span>
+                    <span><a href=""><font-awesome-icon :icon="['fas', 'heart']" /></a></span>
+                    <span><a href=""><font-awesome-icon :icon="['fas', 'bag-shopping']" /></a></span>
                 </div>
             </div>
         </section>
